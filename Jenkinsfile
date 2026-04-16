@@ -20,7 +20,7 @@ pipeline {
             steps { bat 'gradlew test'}
         }
         stage('Deploy') {
-            steps { powershell 'java -jar build/libs/hello-world-java-V1.0.jar'}           
+            steps { bat 'java -jar build/libs/hello-world-java-V1.0.jar'}           
         }    
 }
 
