@@ -1,9 +1,16 @@
 pipeline {
     agent any
+    environment {
+        JAVA_HOME = 'C:\\Program Files\\Java\\jdk-21.0.10' // Set the path to your JDK
+        PATH = "${env.JAVA_HOME}\\bin;${env.PATH}" // Add JDK bin to PATH
+    }
+
+
+
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'master', url: 'https://github.com/nawaf83/hello-world-java1.git'
+                git branch: 'master', url: 'https://github.com/a19447a19447-droid/hello-world-java-1.git'
             }
         }
         stage('Build') {
