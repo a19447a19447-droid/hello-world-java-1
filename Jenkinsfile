@@ -15,7 +15,7 @@ pipeline {
             }
         }
 
-        stage('Checkout') { //change the below path to your repositoy url changes to dfghnbv
+        stage('Checkout') { //change the below path to your repositoy url changes to 
             steps {
                 git branch: 'master', url: 'https://github.com/a19447a19447-droid/hello-world-java-1.git'
             }
